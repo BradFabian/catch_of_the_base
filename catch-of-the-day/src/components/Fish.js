@@ -4,6 +4,9 @@ class Fish extends React.Component {
   handleClick = () => {
     this.props.addToOrder(this.props.index);
   };
+  handleDelete = () => {
+    this.props.deleteOrder(this.props.index);
+  };
   render() {
     const { image, name, price, desc, status } = this.props.details;
     const isAvailable = status === "available";
